@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>💀 Minecraft Skin Lopó 💀</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 90vh;
+            background-color: #272525;
+            color: white;
+        }
+
+        p {
+            color: gray;
+        }
+
+        .container {
+            text-align: center;
+        }
+
+        input {
+            background-color: #110f0f;
+            color: white;
+            border-radius: 10px;
+            border-style: none;
+            text-align: center;
+            padding: 10px;
+            font-size: 16px;
+            margin-bottom: 10px;
+        }
+
+        button {
+            background-color: #110f0f;
+            color: white;
+            border-radius: 10px;
+            border-style: none;
+            padding: 10px;
+            font-size: 16px;
+        }
+
+        .avatar {
+            width: 128px;
+            height: 128px;
+            display: block;
+            margin: 10px auto;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <p>(Ha egy Steve skint látsz akkor valószínüleg hibás nevet adtál meg)</p>
+        <p>(BETA)</p>
+        <h1>💀 Minecraft Skin lopó 💀</h1>
+        <input type="text" id="username" placeholder="Minecraft Név">
+        <button onclick="showAvatar()">Mutasd!</button>
+        <div id="avatar-container">
+            <img id="avatar" class="avatar">
+        </div>
+    </div>
+
+    <script>
+        function showAvatar() {
+            const username = document.getElementById("username").value;
+            if (username) {
+                const avatarUrl = `https://minotar.net/skin/${username}`;
+                document.getElementById("avatar").src = avatarUrl;
+            } else {
+                alert("Kérlek, add meg a Minecraft felhasználóneved!");
+            }
+        }
+    </script>
+</body>
+</html>
